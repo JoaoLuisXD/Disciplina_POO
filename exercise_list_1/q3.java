@@ -11,7 +11,7 @@ public class q3 {
         float height = sc.nextFloat();
 
         float volume = 3.14159f * (radius * radius) * height;
-        System.out.print("Volume: " + volume);
+        System.out.print("Volume of a can of oil: " + volume);
 
         sc.close();
     }
