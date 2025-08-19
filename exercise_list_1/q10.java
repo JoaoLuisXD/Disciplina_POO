@@ -30,7 +30,7 @@ public class q10 {
             System.out.println("New value: " + value);
 
         }
-
+        
         sc.close();
     }   
 }
