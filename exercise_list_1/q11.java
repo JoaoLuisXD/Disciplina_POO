@@ -13,7 +13,6 @@ public class q11 {
 
         System.out.printf("You lived %d days", age);
 
-        
         sc.close();
     }
 }

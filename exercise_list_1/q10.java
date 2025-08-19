@@ -28,7 +28,6 @@ public class q10 {
             System.out.println("The comission amount will be 7% !!!");
             value = value + value * 0.7f;
             System.out.println("New value: " + value);
-
         }
         
         sc.close();
