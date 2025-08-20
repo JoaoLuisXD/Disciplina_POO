@@ -8,28 +8,46 @@ public class q10 {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter the value of your sales: ");
-        float value = sc.nextFloat();
+        String[] names = new String[3];   // nomes dos corretores
+        float[] sales = new float[3];     // vendas
+        float[] commissions = new float[3]; // comissão calculada
 
-        if (value > 50000) 
-        {
-            System.out.println("The comission amount will be 12% !!!");
-            value = value + value * 0.12f;
-            System.out.println("New value: " + value);
+        float totalSales = 0;
+
+        // Entrada de dados
+        for (int i = 0; i < 3; i++) {
+            System.out.print("Enter the name of broker " + (i + 1) + ": ");
+            names[i] = sc.next();
+            System.out.print("Enter the value of sales: ");
+            sales[i] = sc.nextFloat();
+
+            // Cálculo da comissão
+            if (sales[i] > 50000) 
+            {
+                commissions[i] = sales[i] * 0.12f;
+            } 
+            else if (sales[i] >= 30000) 
+            {
+                commissions[i] = sales[i] * 0.095f;
+            } 
+            else 
+            {
+                commissions[i] = sales[i] * 0.07f;
+            }
+
+            totalSales += sales[i];
         }
-        else if (value >= 30000f && value <= 50000) 
+
+        // Relatório
+        System.out.println("\n--- SALES REPORT ---");
+        for (int i = 0; i < 3; i++) 
         {
-            System.out.println("The comission amount will be 9.5% !!!");
-            value = value + value * 0.095f;
-            System.out.println("New value: " + value);
+            System.out.printf("Broker: %s | Sale: %.2f | Commission: %.2f%n",
+            names[i], sales[i], commissions[i]);
         }
-        else
-        {
-            System.out.println("The comission amount will be 7% !!!");
-            value = value + value * 0.7f;
-            System.out.println("New value: " + value);
-        }
-        
+
+        System.out.printf("\nTOTAL SALES OF COMPANY: %.2f%n", totalSales);
+
         sc.close();
     }   
 }
