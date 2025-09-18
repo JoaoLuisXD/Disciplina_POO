@@ -3,17 +3,18 @@ package aula4_java;
 public class atividade3_poo {
     public static void main(String[] args) {
 
-        house casa1 = new house();
-        casa1.numDoors = 1;
-        casa1.numWindows = 2;
-        casa1.adress = "Center";
-
-        house casa2 = new house();
-        casa2.numDoors = 3;
-        casa2.numWindows = 4;
-        casa2.adress = "Interior";
+        house casa1 = createHouse(1, 2, "Center");
+        house casa2 = createHouse(3, 4, "Interior");
 
         System.out.println(casa1.adress);
         System.out.println(casa2.adress);
-    }    
+    } 
+    public static house createHouse(int numDoors, int numWindows, String adresss)
+    {
+        house house1 = new house();
+        house1.numDoors = numDoors;
+        house1.numWindows = numWindows;
+        house1.adress = adresss;
+        return house1;
+    }
 }
