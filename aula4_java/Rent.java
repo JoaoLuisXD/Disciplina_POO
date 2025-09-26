@@ -1,7 +1,7 @@
 package aula4_java;
 
 public class Rent extends House{
-
+    
     private float rentValue;
     
     public Rent(int numDoors, int numWindows, String adress, float rentValue){
