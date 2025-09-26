@@ -16,4 +16,15 @@ public class Rent extends House{
     public void setRentValue(float rentValue){
         this.rentValue = rentValue;
     }
+
+    public float sellerComission(){
+        return rentValue;
+    }
+
+    public void printHouse()
+    {
+        super.printHouse();
+        System.out.println("Rent value: " + rentValue);
+        System.out.println("----------------------------");
+    }
 }

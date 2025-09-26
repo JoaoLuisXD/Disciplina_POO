@@ -61,4 +61,9 @@ public class House {
     public void setAdress(String adress) {
         this.adress = adress;
     }
+
+    public float sellerComission()
+    {
+        return 0;
+    }
 }

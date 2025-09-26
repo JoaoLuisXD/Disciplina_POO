@@ -24,5 +24,8 @@ public class atividade3_poo {
         System.out.println(sale1.getSaleValue());
 
         House casa7 = new Sale(8, 9, "mossoro", 300000);
+
+        rent1.printHouse();
+
     } 
 }

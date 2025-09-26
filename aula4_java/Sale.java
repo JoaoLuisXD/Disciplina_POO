@@ -15,4 +15,15 @@ public class Sale extends House{
     public float getSaleValue(){
         return saleValue;
     }
+
+    public float sellerComission(){
+        return saleValue * 0.06f;
+    }
+
+    public void printHouse(){
+        super.printHouse();
+        System.out.println("Sale value: " + saleValue);
+        System.out.println("----------------------------");
+    }
+
 }
