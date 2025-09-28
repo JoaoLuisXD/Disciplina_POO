@@ -15,6 +15,6 @@ public class atividade1_poo {
     }
     
     lista.remove(1);
-
+    
     }
 }
