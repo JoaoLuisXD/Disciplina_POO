@@ -13,5 +13,6 @@ public class carRental {
         System.out.println("after add seats on car 1");
         System.out.println("-------------------");
         car1.printCar();
+        System.out.println(car1.getNumSeats());
     }    
 }
