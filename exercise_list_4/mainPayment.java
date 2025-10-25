@@ -14,7 +14,7 @@ public class mainPayment {
         paymentList.add(p3);
 
         for(Payment p:paymentList){
-            p.printPayment();
+            if (p instanceof Pix) p.printPayment();
         }
     }
 }
